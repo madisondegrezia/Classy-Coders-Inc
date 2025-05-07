@@ -7,6 +7,7 @@ class Employee {
     this.position = position;
     this.#salary = salary;
     this.#isHired = true;
+    //Employee.#allEmployees.push(this);
     Employee.setEmployees(this);
   }
 
@@ -38,10 +39,14 @@ class Employee {
     Employee.#allEmployees.push(employee);
   }
 
-  //   static getTotalPayroll() {
-  //     let total = 0;
-  //     let employeeArr = Employee.getEmployees()
-  //   }
+  static getTotalPayroll() {
+    let total = 0;
+    let employeeArr = Employee.getEmployees();
+    for (let i = 0; i < employeeArr.length; i++) {
+      total += employeeArr[i].getSalary();
+    }
+    return total;
+  }
 }
 
 module.exports = {
