@@ -1,4 +1,4 @@
-require("./Employee.js")
+const { Employee } = require("./classes/Employee")
 
 class SalesPerson extends Employee {
     #totalSales

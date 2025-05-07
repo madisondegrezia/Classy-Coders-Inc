@@ -1,4 +1,4 @@
-require("./Employee.js")
+const { Employee } = require("./classes/Employee")
 
 class SoftwareEngineer extends Employee {
     #programmingLanguages
