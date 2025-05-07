@@ -1,4 +1,4 @@
-const { Employee } = require("./classes/Employee")
+const { Employee } = require("./Employee")
 
 class SalesPerson extends Employee {
     #totalSales
