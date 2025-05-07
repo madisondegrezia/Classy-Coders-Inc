@@ -2,16 +2,16 @@ const { Employee } = require("./Employee")
 
 class SoftwareEngineer extends Employee {
     #programmingLanguages
-    constructor(name, position, salary, isHired, programmingLanguages) {
-        super(name, position, salary, isHired);
-        this.#programmingLanguages = programmingLanguages;
+    constructor(name, position, salary, programmingLanguages) {
+        super(name, position, salary);
+        this.#programmingLanguages = programmingLanguages || [];
     }
-    get programmingLanguages() {
+    getProgrammingLanguages() {
         return this.#programmingLanguages;
     }
 
-    set programmingLanguages(language) {
-        this.#programmingLanguages = language;
+    setProgrammingLanguage(language) {
+        this.#programmingLanguages.push(language);
     }
 
 
